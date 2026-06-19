@@ -1,0 +1,60 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { externalGames } from "@/data/externalGames";
+
+const reflexAlternatives = externalGames.slice(0, 5);
+---
+
+<BaseLayout
+  title="Reflex Games Online"
+  description="Play Arrows Go and related reflex-friendly browser games with fast restarts, readable rules, and quick no-download play."
+  seo={{ path: "/games/reflex-games", seoTitle: "Reflex Games Online - Free Browser Picks" }}
+>
+  <section class="games-directory">
+    <header class="games-directory-hero">
+      <div>
+        <h1>Reflex games online.</h1>
+        <p>Start with Arrows Go when you want a direct arrow timing challenge, then try related browser games that reward quick reading and cleaner reactions.</p>
+      </div>
+      <a class="games-directory-action" href="/play/"><span></span>Play Arrows Go</a>
+    </header>
+
+    <section class="games-guide-strip" aria-labelledby="reflex-game-guide">
+      <h3 id="reflex-game-guide">How to play reflex games better</h3>
+      <div>
+        <article>
+          <h3>React earlier, not harder</h3>
+          <p>Good reflex play comes from seeing the next problem early. In Arrows Go, that means scanning the lane before the arrow reaches a hazard.</p>
+        </article>
+        <article>
+          <h3>Use short sets</h3>
+          <p>Short sets of attempts make it easier to notice one mistake and correct it. Stop when the same rushed input keeps repeating.</p>
+        </article>
+        <article>
+          <h3>Keep controls calm</h3>
+          <p>One deliberate input is usually better than several panic inputs. The cleaner the control rhythm, the easier the next decision becomes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="games-directory-main" aria-labelledby="reflex-games-list">
+      <div class="games-directory-intro">
+        <h2 id="reflex-games-list">Related browser games</h2>
+        <p>These games are selected for quick feedback, short sessions, and readable decision loops.</p>
+      </div>
+      <div class="games-directory-list">
+        {reflexAlternatives.map((game, index) => (
+          <a class:list={["games-directory-row", game.accentClass]} href={`/games/${game.slug}/`}>
+            <span class="games-directory-number">{String(index + 1).padStart(2, "0")}</span>
+            <img src={game.thumbnail} alt={`${game.title} thumbnail`} width="320" height="180" loading="lazy" />
+            <div>
+              <span>{game.category}</span>
+              <h3>{game.title}</h3>
+              <p>{game.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </section>
+</BaseLayout>

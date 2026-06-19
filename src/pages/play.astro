@@ -1,0 +1,124 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { externalGames } from "@/data/externalGames";
+import { siteConfig } from "@/data/siteConfig";
+
+const playSteps = [
+  ["1", "Read", "Watch the next lane before the arrow reaches danger."],
+  ["2", "Turn", "Change direction with one clean input."],
+  ["3", "Survive", "Avoid hazards and learn from each restart."],
+];
+
+const tips = [
+  "Look ahead instead of staring at the arrow.",
+  "Turn early when a lane is closing.",
+  "Use fullscreen when small hazards are hard to read.",
+];
+
+const relatedGames = externalGames.slice(0, 4);
+---
+
+<BaseLayout
+  title={`Play ${siteConfig.name} Online`}
+  description={`Play ${siteConfig.name} online free in your browser. Guide the arrow, time each direction change, avoid hazards, and restart instantly on desktop or mobile.`}
+>
+  <section class="play-stage" id="top">
+    <div class="play-stage-bg" aria-hidden="true"></div>
+    <div class="play-shell" data-game-shell>
+      <iframe src="/game/index.html" title="Arrows Go game" allow="autoplay; fullscreen *" allowfullscreen></iframe>
+      <div class="play-float-controls">
+        <button type="button" data-share-game aria-label="Share game">
+          <span>Share</span>
+        </button>
+        <button type="button" data-fullscreen-game aria-label="Fullscreen game">
+          <span>Fullscreen</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="play-info-section">
+    <div class="play-info-head">
+      <p class="eyebrow">Play online</p>
+      <h1>Arrows Go in your browser.</h1>
+      <p>Free, instant, and built for quick timing runs.</p>
+    </div>
+    <div class="play-step-grid">
+      {playSteps.map(([number, title, text]) => (
+        <article>
+          <span>{number}</span>
+          <strong>{title}</strong>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="play-info-section play-split-section">
+    <div>
+      <p class="eyebrow">Related games</p>
+      <p class="play-panel-title">Try more quick browser games.</p>
+      <div class="games-feature-rail" aria-label="Related games near Arrows Go">
+        {relatedGames.map((game) => (
+          <a class:list={["games-feature-link", game.accentClass]} href={`/games/${game.slug}/`}>
+            <img src={game.thumbnail} alt={`${game.title} thumbnail`} width="640" height="360" loading="lazy" />
+            <div>
+              <span>{game.category}</span>
+              <strong>{game.shortTitle}</strong>
+            </div>
+            <small>Related</small>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="play-tip-panel">
+      <p class="eyebrow">Tips</p>
+      <ul>
+        {tips.map((tip) => <li>{tip}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="play-info-section seo-copy-section" aria-labelledby="play-page-guide">
+    <div class="section-head">
+      <h2 id="play-page-guide">Play guide.</h2>
+    </div>
+    <div class="seo-copy-grid">
+      <article class="seo-copy-card seo-copy-wide">
+        <h3>What makes Arrows Go different</h3>
+        <p>Arrows Go keeps the browser arcade loop direct. The arrow moves, hazards create pressure, and the player changes direction before the safe lane disappears. There is no account setup, no long tutorial, and no download; the playable game loads through a local wrapper at /game/index.html.</p>
+      </article>
+      <article class="seo-copy-card">
+        <h3>How to start a strong run</h3>
+        <p>Scan ahead before the arrow reaches a tight space. If the next lane is safe, turn with enough room to recover. Late turns can work, but they leave less margin for the next hazard and often lead to panic inputs.</p>
+      </article>
+      <article class="seo-copy-card">
+        <h3>Best sessions</h3>
+        <p>Play Arrows Go in short sets. Five to ten attempts are enough to notice one mistake and correct it. Use fullscreen on larger screens, keep touch inputs small on mobile, and pause when timing starts to feel inconsistent.</p>
+      </article>
+    </div>
+  </section>
+  <script is:inline>
+    (() => {
+      const shell = document.querySelector("[data-game-shell]");
+      const iframe = shell?.querySelector("iframe");
+      const fullscreen = document.querySelector("[data-fullscreen-game]");
+      const share = document.querySelector("[data-share-game]");
+      fullscreen?.addEventListener("click", async () => {
+        const active = document.fullscreenElement;
+        if (active) {
+          await document.exitFullscreen?.();
+          return;
+        }
+        await (iframe?.requestFullscreen?.() ?? shell?.requestFullscreen?.());
+      });
+      share?.addEventListener("click", async () => {
+        const data = { title: "Arrows Go", text: "Play Arrows Go online.", url: location.href };
+        try {
+          if (navigator.share) await navigator.share(data);
+          else await navigator.clipboard?.writeText(location.href);
+        } catch {}
+      });
+    })();
+  </script>
+</BaseLayout>

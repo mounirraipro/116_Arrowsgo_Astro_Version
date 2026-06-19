@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Arrows Go touch icon">
+  <rect width="180" height="180" rx="38" fill="#07111f"/>
+  <circle cx="90" cy="90" r="66" fill="#10243d"/>
+  <path d="M35 96h72L78 67l15-15 55 55-55 55-15-15 29-29H35z" fill="#20c997"/>
+  <path d="M39 63h42L66 48l15-15 40 40-40 40-15-15 15-15H39z" fill="#ffd43b"/>
+</svg>
