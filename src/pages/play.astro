@@ -20,12 +20,12 @@ const relatedGames = externalGames.slice(0, 4);
 
 <BaseLayout
   title={`Play ${siteConfig.name} Online`}
-  description={`Play Remove All Arrows on ${siteConfig.name} online free in your browser. Launch arrows in sequence, avoid collisions, and clear every board on desktop or mobile.`}
+  description={`Play ${siteConfig.name} online free in your browser. Launch arrows in sequence, avoid collisions, and clear every board on desktop or mobile.`}
 >
   <section class="play-stage" id="top">
     <div class="play-stage-bg" aria-hidden="true"></div>
     <div class="play-shell" data-game-shell>
-      <iframe src="/game/index.html" title="Remove All Arrows game" allow="autoplay; fullscreen *" allowfullscreen></iframe>
+      <iframe src="/game/index.html" title="Arrows Go game" allow="autoplay; fullscreen *" allowfullscreen></iframe>
       <div class="play-float-controls">
         <button type="button" data-share-game aria-label="Share game">
           <span>Share</span>
@@ -40,7 +40,7 @@ const relatedGames = externalGames.slice(0, 4);
   <section class="play-info-section">
     <div class="play-info-head">
       <p class="eyebrow">Play online</p>
-      <h1>Remove All Arrows in your browser.</h1>
+      <h1>Arrows Go in your browser.</h1>
       <p>Free, instant, and built for quick logic puzzles.</p>
     </div>
     <div class="play-step-grid">
@@ -113,7 +113,7 @@ const relatedGames = externalGames.slice(0, 4);
         await (iframe?.requestFullscreen?.() ?? shell?.requestFullscreen?.());
       });
       share?.addEventListener("click", async () => {
-        const data = { title: "Remove All Arrows", text: "Play Remove All Arrows on Arrows Go.", url: location.href };
+        const data = { title: "Arrows Go", text: "Play Arrows Go online.", url: location.href };
         try {
           if (navigator.share) await navigator.share(data);
           else await navigator.clipboard?.writeText(location.href);

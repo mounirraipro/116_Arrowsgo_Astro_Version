@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Arrows Go",
   tagline: "Launch arrows in the right order and clear the board.",
   description:
-    "Play Remove All Arrows on Arrows Go, a free browser arrow puzzle game where you launch arrows in sequence, avoid collisions, and clear every board with no download.",
+    "Play Arrows Go, a free browser arrow puzzle game where you launch arrows in sequence, avoid collisions, and clear every board with no download.",
   gameGenre: "arrow logic puzzle game",
   audience: "puzzle players, brain-game fans, students, families, and casual browser game players",
   contactEmail: "contact@arrowsgo.com",

@@ -9,8 +9,8 @@ import { brandAccentClass, getFocusAccentClass } from "@/data/accentClasses";
 const recentPosts = articles.slice(0, 3);
 const mainGame = {
   href: "/play/",
-  title: "Remove All Arrows Online",
-  shortTitle: "Remove Arrows",
+  title: "Arrows Go Online",
+  shortTitle: "Arrows Go",
   category: "Now playing",
   thumbnail: "/game-thumbs/arrows-go.svg",
   accent: "#2563eb",
@@ -43,8 +43,8 @@ const homeStructuredData = [
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
-    name: "Remove All Arrows",
-    alternateName: ["Arrows Go Online", "ArrowsGo", "Arrow puzzle game"],
+    name: "Arrows Go",
+    alternateName: ["Arrows Go Online", "ArrowsGo", "Remove All Arrows", "Arrow puzzle game"],
     url: `${siteConfig.siteUrl}/`,
     image: new URL(siteConfig.defaultOgImage, siteConfig.siteUrl).href,
     description: siteConfig.description,
@@ -94,7 +94,7 @@ const homeStructuredData = [
         ))}
       </div>
       <div class="hero-game">
-        <iframe src="/game/index.html" title="Play Remove All Arrows" loading="eager"></iframe>
+        <iframe src="/game/index.html" title="Play Arrows Go" loading="eager"></iframe>
       </div>
       <div class="game-bento-grid game-bento-grid-side" aria-label="More games">
         {homeBentoRight.map((game, index) => (
@@ -111,8 +111,8 @@ const homeStructuredData = [
     <div class="hero-copy">
       <div class="hero-copy-main">
         <p class="eyebrow">Instant play</p>
-        <h1>Remove All Arrows Online</h1>
-        <p>Play Remove All Arrows free on Arrows Go. Launch each arrow in the right order, avoid collisions, and clear the board with no download and no account.</p>
+        <h1>Arrows Go</h1>
+        <p>Play Arrows Go free in your browser. Launch each arrow in the right order, avoid collisions, and clear the board with no download and no account.</p>
         <a class="text-link hero-note" href="/how-to-play/">Learn the rules</a>
       </div>
       <div class="hero-play-panel">
@@ -290,7 +290,7 @@ const homeStructuredData = [
       <p class="eyebrow">Ready?</p>
       <h3>Open Arrows Go and clear a board.</h3>
     </div>
-    <a class="primary-action" href="/play/"><span class="play-triangle"></span>Play Remove All Arrows</a>
+    <a class="primary-action" href="/play/"><span class="play-triangle"></span>Play Arrows Go</a>
   </section>
 
   <script is:inline>

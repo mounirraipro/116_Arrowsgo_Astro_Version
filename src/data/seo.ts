@@ -57,20 +57,20 @@ const routeFallbackSeo = (route: SiteRoute): SeoPage => ({
 const pageOverrides: Partial<Record<string, Partial<SeoPage>>> = {
   "/": {
     title: siteConfig.name,
-    seoTitle: "Remove All Arrows Online - Free Arrow Puzzle Game",
+    seoTitle: "Arrows Go Online - Free Arrow Puzzle Game",
     description: siteConfig.description,
     priority: 1,
     changeFrequency: "weekly",
   },
   "/play": {
-    seoTitle: "Play Remove All Arrows Online - Arrows Go",
-    description: "Play Remove All Arrows free in your browser. Launch arrows in their pointed direction, avoid collisions, and clear each puzzle with no download.",
+    seoTitle: "Play Arrows Go Online - Free Arrow Puzzle Game",
+    description: "Play Arrows Go free in your browser. Launch arrows in their pointed direction, avoid collisions, and clear each puzzle with no download.",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/games": {
-    seoTitle: "Free Browser Puzzle Games Like Remove All Arrows",
-    description: "Play Remove All Arrows on Arrows Go and related browser puzzle games focused on pathing, aiming, grid planning, and quick no-download sessions.",
+    seoTitle: "Free Browser Puzzle Games Like Arrows Go",
+    description: "Play Arrows Go and related browser puzzle games focused on pathing, aiming, grid planning, and quick no-download sessions.",
     priority: 0.82,
     changeFrequency: "weekly",
   },
