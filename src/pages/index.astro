@@ -9,11 +9,11 @@ import { brandAccentClass, getFocusAccentClass } from "@/data/accentClasses";
 const recentPosts = articles.slice(0, 3);
 const mainGame = {
   href: "/play/",
-  title: "Arrows Go Online",
-  shortTitle: "Arrows Go",
+  title: "Remove All Arrows Online",
+  shortTitle: "Remove Arrows",
   category: "Now playing",
   thumbnail: "/game-thumbs/arrows-go.svg",
-  accent: "#12b886",
+  accent: "#2563eb",
   accentClass: brandAccentClass,
 };
 const homeBentoGames = [
@@ -32,10 +32,10 @@ const homeBentoLeft = homeBentoGames.slice(0, 4);
 const homeBentoRight = homeBentoGames.slice(4, 8);
 
 const faqItems = [
-  ["What is Arrows Go?", "Arrows Go is a free browser arcade game where you guide a moving arrow by changing direction and avoiding hazards."],
-  ["How do you play Arrows Go online?", "Open the play page, watch the arrow path, and time each direction change before the next hazard closes in."],
-  ["Is Arrows Go free?", "Yes. Arrows Go is free to play in the browser with no download, no account, and no app install required."],
-  ["Does Arrows Go work on mobile?", "Yes. The embedded game is designed for browser play and supports touch or mouse input where the player allows it."],
+  ["What is Arrows Go?", "Arrows Go is a free browser puzzle site where you can play Remove All Arrows online."],
+  ["How do you play Remove All Arrows?", "Click or tap arrows to launch them in their pointed direction. Clear every arrow without letting a launched arrow collide with another one."],
+  ["Is Arrows Go free?", "Yes. Remove All Arrows is free to play through Arrows Go with no download, no account, and no app install required."],
+  ["Does Arrows Go work on mobile?", "Yes. The embedded Playgama game supports browser play on desktop and mobile devices where the iframe is available."],
   ["Why is the iframe loaded through /game/index.html?", "The local wrapper keeps the main Astro site route stable while loading the hosted HTML5 game inside the playable frame."],
 ];
 
@@ -43,14 +43,14 @@ const homeStructuredData = [
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
-    name: "Arrows Go",
-    alternateName: ["Arrows Go Online", "ArrowsGo", "Arrow arcade game"],
+    name: "Remove All Arrows",
+    alternateName: ["Arrows Go Online", "ArrowsGo", "Arrow puzzle game"],
     url: `${siteConfig.siteUrl}/`,
     image: new URL(siteConfig.defaultOgImage, siteConfig.siteUrl).href,
     description: siteConfig.description,
     applicationCategory: "Game",
     gamePlatform: ["Web browser", "Desktop", "Mobile", "Tablet"],
-    genre: ["Arcade", "Timing", "Reflex", "Arrow game"],
+    genre: ["Puzzle", "Logic", "Brain game", "Arrow game"],
     operatingSystem: "Any modern browser",
     offers: {
       "@type": "Offer",
@@ -94,7 +94,7 @@ const homeStructuredData = [
         ))}
       </div>
       <div class="hero-game">
-        <iframe src="/game/index.html" title="Play Arrows Go" loading="eager"></iframe>
+        <iframe src="/game/index.html" title="Play Remove All Arrows" loading="eager"></iframe>
       </div>
       <div class="game-bento-grid game-bento-grid-side" aria-label="More games">
         {homeBentoRight.map((game, index) => (
@@ -111,14 +111,14 @@ const homeStructuredData = [
     <div class="hero-copy">
       <div class="hero-copy-main">
         <p class="eyebrow">Instant play</p>
-        <h1>Arrows Go Online</h1>
-        <p>Play Arrows Go free in your browser. Change direction at the right moment, avoid hazards, and keep the arrow moving with no download and no account.</p>
+        <h1>Remove All Arrows Online</h1>
+        <p>Play Remove All Arrows free on Arrows Go. Launch each arrow in the right order, avoid collisions, and clear the board with no download and no account.</p>
         <a class="text-link hero-note" href="/how-to-play/">Learn the rules</a>
       </div>
       <div class="hero-play-panel">
         <div class="hero-panel-top">
           <span>Ready in browser</span>
-          <strong>Start a quick run.</strong>
+          <strong>Start a quick puzzle.</strong>
         </div>
         <div class="hero-actions">
           <a class="primary-action" href="/play/"><span class="play-triangle"></span>Play Full Screen</a>
@@ -137,9 +137,9 @@ const homeStructuredData = [
     <div class="home-section-head split-head">
       <div>
         <p class="eyebrow">Arrows Go guide</p>
-        <h2>Play the arrow arcade timing game.</h2>
+        <h2>Play the arrow logic puzzle game.</h2>
       </div>
-      <p>Arrows Go turns one simple idea into a tight browser challenge: read the route, time the direction change, and survive the next hazard.</p>
+      <p>Remove All Arrows turns one simple idea into a tight browser challenge: read the board, launch arrows in sequence, and avoid every collision.</p>
     </div>
     <div class="process-strip">
       <article>
@@ -148,14 +148,14 @@ const homeStructuredData = [
         <p>Open <a href="/play/">Arrows Go online</a> and start instantly. The game runs in the browser with no app store, installer, or sign-up flow.</p>
       </article>
       <article>
-        <span>Turn</span>
-        <h3>Direction timing</h3>
-        <p>Watch the arrow path and change direction before the next hazard closes the lane.</p>
+        <span>Order</span>
+        <h3>Launch sequence</h3>
+        <p>Trace each straight path and choose which arrow should leave the board first.</p>
       </article>
       <article>
         <span>Focus</span>
-        <h3>Fast restarts</h3>
-        <p>Each attempt is short enough to learn from. Notice the late turn, restart, and make the next decision cleaner.</p>
+        <h3>Collision resets</h3>
+        <p>Each attempt is short enough to learn from. Notice the blocked path, restart, and make the next sequence cleaner.</p>
       </article>
       <article>
         <span>Learn</span>
@@ -168,27 +168,27 @@ const homeStructuredData = [
   <section class="home-section home-authority">
     <div class="authority-panel">
       <div class="home-section-head">
-        <p class="eyebrow">Arcade context</p>
+        <p class="eyebrow">Puzzle context</p>
         <h3>Built for quick directional decisions.</h3>
         <p>
-          Keep <a class="site-identity-link" href="/"><strong>www.arrowsgo.com</strong></a> as your route back to the free browser game, then explore the classic arcade ideas behind timing and reaction play.
+          Keep <a class="site-identity-link" href="/"><strong>www.arrowsgo.com</strong></a> as your route back to the free browser puzzle, then explore the classic logic ideas behind sequence solving and spatial reasoning.
         </p>
       </div>
-      <div class="authority-links" aria-label="External arcade references">
-        <a href="https://en.wikipedia.org/wiki/Arcade_video_game" target="_blank" rel="noopener noreferrer">
+      <div class="authority-links" aria-label="External puzzle references">
+        <a href="https://en.wikipedia.org/wiki/Puzzle_video_game" target="_blank" rel="noopener noreferrer">
           <span>Wikipedia</span>
-          <strong>Arcade game history</strong>
-          <small>How short-session action games became a lasting format.</small>
+          <strong>Puzzle game context</strong>
+          <small>How rule-based puzzle games create readable challenges.</small>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Reaction_time" target="_blank" rel="noopener noreferrer">
+        <a href="https://en.wikipedia.org/wiki/Logic_puzzle" target="_blank" rel="noopener noreferrer">
           <span>Wikipedia</span>
-          <strong>Reaction time</strong>
-          <small>The attention and response concept behind reflex challenges.</small>
+          <strong>Logic puzzle</strong>
+          <small>The reasoning concept behind board-clearing challenges.</small>
         </a>
-        <a href="https://www.youtube.com/results?search_query=arrow+arcade+gameplay" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.youtube.com/results?search_query=remove+all+arrows+gameplay" target="_blank" rel="noopener noreferrer">
           <span>YouTube</span>
           <strong>Gameplay videos</strong>
-          <small>Watch arrow, timing, and reflex game examples.</small>
+          <small>Watch arrow puzzle and board-clearing examples.</small>
         </a>
       </div>
     </div>
@@ -205,7 +205,7 @@ const homeStructuredData = [
         <img src="/game-thumbs/arrows-go.svg" alt="Arrows Go direction control preview" width="640" height="360" loading="lazy" />
         <div>
           <span>{playFocusAreas[0].name}</span>
-          <strong>Turn before the lane closes.</strong>
+          <strong>Clear the first safe arrow.</strong>
           <small>{playFocusAreas[0].description}</small>
         </div>
       </a>
@@ -227,15 +227,15 @@ const homeStructuredData = [
     <div class="home-section-head split-head">
       <div>
         <p class="eyebrow">How it works</p>
-        <h3>Read. Turn. Survive. Retry.</h3>
+        <h3>Read. Sequence. Launch. Clear.</h3>
       </div>
-      <p>Four steps from first input to a cleaner run.</p>
+      <p>Four steps from first scan to a cleaner board.</p>
     </div>
     <div class="process-strip">
-      <article><span>01</span><h3>Read</h3><p>Scan the next lane before the arrow reaches danger.</p></article>
-      <article><span>02</span><h3>Turn</h3><p>Change direction with one deliberate input at the right moment.</p></article>
-      <article><span>03</span><h3>Dodge</h3><p>Avoid hazards and keep enough space for the next decision.</p></article>
-      <article><span>04</span><h3>Retry</h3><p>Use each failed run to tune the next timing window.</p></article>
+      <article><span>01</span><h3>Read</h3><p>Scan the full board before choosing a move.</p></article>
+      <article><span>02</span><h3>Sequence</h3><p>Pick the arrow that opens the safest next path.</p></article>
+      <article><span>03</span><h3>Launch</h3><p>Send one arrow straight toward its exit without collisions.</p></article>
+      <article><span>04</span><h3>Clear</h3><p>Repeat until every arrow leaves the board.</p></article>
     </div>
   </section>
 
@@ -243,8 +243,8 @@ const homeStructuredData = [
     <div class="blog-editorial">
       <div class="home-section-head">
         <p class="eyebrow">From the blog</p>
-        <h3>Sharper arcade timing.</h3>
-        <p>Short reads for cleaner turns, better focus, and mobile play.</p>
+        <h3>Sharper arrow puzzle strategy.</h3>
+        <p>Long-form reads for better launch order, cleaner clears, and mobile play.</p>
         <a class="text-link" href="/blog/">Browse all articles</a>
       </div>
       <div class="blog-board">
@@ -288,9 +288,9 @@ const homeStructuredData = [
   <section class="home-cta">
     <div>
       <p class="eyebrow">Ready?</p>
-      <h3>Open Arrows Go and start a run.</h3>
+      <h3>Open Arrows Go and clear a board.</h3>
     </div>
-    <a class="primary-action" href="/play/"><span class="play-triangle"></span>Play Arrows Go</a>
+    <a class="primary-action" href="/play/"><span class="play-triangle"></span>Play Remove All Arrows</a>
   </section>
 
   <script is:inline>

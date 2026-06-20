@@ -8,10 +8,10 @@
   --color-quiet: #7a879b;
   --color-line: #dbe4ef;
   --color-line-strong: #c9d6e6;
-  --color-game-green: #2cd089;
-  --color-game-green-dark: #0fa865;
-  --color-game-green-soft: #e8fff4;
-  --color-focus-blue: #00a7cc;
+  --color-game-green: #2563eb;
+  --color-game-green-dark: #1d4ed8;
+  --color-game-green-soft: #eff6ff;
+  --color-focus-blue: #2563eb;
   --color-game-coral: #ff5e4d;
   --color-game-coral-dark: #e03f30;
   --color-game-coral-soft: #fff0ed;
@@ -980,7 +980,7 @@
   }
 
   .accent-green {
-    --accent: #23cc88;
+    --accent: #2563eb;
   }
 
   .accent-sky {

@@ -1,11 +1,11 @@
 # Arrows Go Astro Version
 
-Standalone Astro website for **Arrows Go**, a free browser arrow arcade game.
+Standalone Astro website for **Arrows Go**, featuring **Remove All Arrows**, a free browser arrow puzzle game.
 
 ## Included
 
 - Astro static site with home, play, games, blog, FAQ, about, contact, legal, sitemap, and support pages.
-- Embedded game wrapper at `public/game/index.html`.
+- Embedded Playgama Remove All Arrows wrapper at `public/game/index.html`.
 - Main playable route loaded through `/game/index.html`.
 - Related games directory under `/games/`.
 - SEO metadata, canonical URLs, JSON-LD schema, robots, and XML/HTML sitemaps.

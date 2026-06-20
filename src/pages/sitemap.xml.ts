@@ -14,8 +14,8 @@ type SitemapEntry = {
 const staticContentPages: SitemapEntry[] = [
   { path: "/game", changeFrequency: "weekly", priority: 0.74 },
   { path: "/game/index.html", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/games/timing-games", changeFrequency: "monthly", priority: 0.68 },
-  { path: "/games/reflex-games", changeFrequency: "monthly", priority: 0.68 },
+  { path: "/games/puzzle-games", changeFrequency: "monthly", priority: 0.68 },
+  { path: "/games/brain-games", changeFrequency: "monthly", priority: 0.68 },
 ];
 
 const gamePages: SitemapEntry[] = externalGames.map((game) => ({

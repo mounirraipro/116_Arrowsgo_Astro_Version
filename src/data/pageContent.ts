@@ -21,35 +21,36 @@ export type ContentPage = {
 const gameName = siteConfig.name;
 const contact = siteConfig.contactEmail;
 const updated = siteConfig.legalLastUpdated;
+const playableTitle = "Remove All Arrows";
 
 export const pageContent = {
   about: {
     title: "About Arrows Go",
-    seoTitle: `About ${gameName} - Free Arrow Arcade Game`,
-    description: `Learn about ${gameName}, the free browser arrow arcade game built for short timing, focus, and reflex sessions.`,
-    keywords: ["about Arrows Go", "arrow game team", "browser arcade game"],
+    seoTitle: `About ${gameName} - Play ${playableTitle} Online`,
+    description: `Learn about ${gameName}, the browser puzzle site for playing ${playableTitle}, an arrow logic game about launch order and collision-free clears.`,
+    keywords: ["about Arrows Go", "Remove All Arrows online", "arrow puzzle game"],
     schemaType: "AboutPage",
-    intro: "A fast browser game built around one readable idea: turn at the right moment and keep going.",
+    intro: "A focused browser puzzle site built around one readable idea: launch arrows in the right order and clear the board.",
     sections: [
       {
         heading: "What Arrows Go Is",
-        body: "Arrows Go is a free browser arcade game where the player guides a moving arrow through hazards by changing direction at the right moment. The rules are simple, the restarts are quick, and each attempt teaches the next one.",
+        body: `${gameName} is a free browser puzzle site featuring ${playableTitle}. The game asks players to click or tap arrows so each one flies in its pointed direction, exits the board, and avoids every other arrow.`,
       },
       {
         heading: "Why It Works",
-        body: "The game focuses on a clean timing loop. Players do not need a long tutorial, account, or download. They can open the play page, read the screen, react, and improve through short runs.",
+        body: "The rules are simple enough to learn quickly, but the board can become tricky when arrows block each other. A strong clear comes from reading the whole grid before choosing the next launch.",
       },
       {
         heading: "What Makes It Different",
-        body: "Many browser games add menus and upgrades before the core action. Arrows Go keeps attention on movement, spacing, and decision timing, so the first seconds already feel like the real game.",
+        body: `${playableTitle} turns a small directional rule into a sequence puzzle. Instead of reacting to speed, players solve by checking paths, removing blockers, and planning a clean order.`,
       },
       {
         heading: "Key Features",
         items: [
           "Instant play through a browser iframe at /game/index.html.",
-          "Mouse and touch-friendly controls for desktop, tablet, and mobile.",
-          "Short retry loop for quick breaks and focused practice.",
-          "Direction-change gameplay that rewards timing more than memorization.",
+          "Mouse and touch-friendly play for desktop, tablet, and mobile browsers.",
+          "Short puzzle levels that reward path reading and order planning.",
+          "Collision rules that make every launch meaningful.",
           "Free access with no account or app install required.",
         ],
       },
@@ -62,14 +63,14 @@ export const pageContent = {
   accessibility: {
     title: "Accessibility Statement",
     seoTitle: `Accessibility Statement | ${gameName}`,
-    description: `${gameName} is committed to making the website clear, navigable, and practical for as many players as possible.`,
-    keywords: ["Arrows Go accessibility", "accessible browser game", "web accessibility statement"],
+    description: `${gameName} is committed to making the website clear, navigable, and practical for as many puzzle players as possible.`,
+    keywords: ["Arrows Go accessibility", "accessible browser puzzle", "web accessibility statement"],
     updated,
-    intro: "This statement explains the accessibility choices and known limits for the Arrows Go website and embedded game.",
+    intro: `This statement explains the accessibility choices and known limits for the ${gameName} website and embedded ${playableTitle} game.`,
     sections: [
       {
         heading: "Our Commitment",
-        body: "Arrows Go aims to provide a clean website structure with semantic HTML, readable copy, responsive layouts, and predictable navigation.",
+        body: `${gameName} aims to provide a clean website structure with semantic HTML, readable copy, responsive layouts, and predictable navigation.`,
       },
       {
         heading: "Website Measures",
@@ -84,7 +85,7 @@ export const pageContent = {
       {
         heading: "Game Accessibility",
         items: [
-          "The embedded game is visual and timing-based, which can be challenging for some players.",
+          `The embedded ${playableTitle} game is visual and path-based, which can be challenging for some players.`,
           "The surrounding website provides text guides, FAQ answers, and support information outside the iframe.",
           "Fullscreen and share controls are available on the play page where supported by the browser.",
         ],
@@ -92,7 +93,7 @@ export const pageContent = {
       {
         heading: "Known Limitations",
         items: [
-          "The gameplay depends on visual hazard reading and fast input.",
+          "The gameplay depends on visual board reading and pointer or touch input.",
           "The embedded third-party game frame may not expose every internal control to assistive technologies.",
           "Advertisements or external iframe content may follow separate accessibility practices.",
         ],
@@ -105,19 +106,19 @@ export const pageContent = {
   },
   blog: {
     title: "Blog",
-    seoTitle: `Arrows Go Blog - Tips, Guides, and Timing Strategy`,
-    description: `Read ${gameName} guides about timing, direction control, reflex games, mobile browser play, and safe quick-session arcade habits.`,
-    keywords: ["Arrows Go blog", "arrow game tips", "browser arcade guides"],
+    seoTitle: `Arrows Go Blog - ${playableTitle} Guides and Arrow Puzzle Strategy`,
+    description: `Read ${gameName} guides about ${playableTitle}, launch-order strategy, arrow puzzle logic, mobile browser play, and safe quick-session puzzle habits.`,
+    keywords: ["Arrows Go blog", "Remove All Arrows guide", "arrow puzzle tips"],
     schemaType: "Blog",
     eyebrow: "Guides",
-    intro: "Short articles for players who want cleaner movement, better timing, and useful browser game context.",
+    intro: "Long-form puzzle guides for players who want cleaner launch order, better board reading, and useful browser game context.",
     sections: [
       {
         heading: "What We Cover",
         items: [
-          "Beginner guides for playing Arrows Go online.",
-          "Timing and direction-control strategy.",
-          "Related browser games for quick breaks.",
+          `Beginner guides for playing ${playableTitle} online.`,
+          "Launch order, edge clearing, and collision-avoidance strategy.",
+          "Related browser puzzle games for quick breaks.",
           "Parent and safety notes for family-friendly play.",
         ],
       },
@@ -127,13 +128,13 @@ export const pageContent = {
     title: "Contact Us",
     seoTitle: `Contact ${gameName} Support`,
     description: `Contact the ${gameName} team for support, feedback, accessibility concerns, privacy questions, or partnership messages.`,
-    keywords: ["contact Arrows Go", "Arrows Go support", "browser game contact"],
+    keywords: ["contact Arrows Go", "Arrows Go support", "browser puzzle contact"],
     schemaType: "ContactPage",
     intro: "Have a question, suggestion, bug report, or policy concern? Send it here.",
     sections: [
       {
         heading: "Send a Message",
-        body: "We read player feedback and use it to improve the website, guides, and support content around the embedded game.",
+        body: "We read player feedback and use it to improve the website, guides, and support content around the embedded puzzle game.",
       },
       {
         heading: "Contact Details",
@@ -162,7 +163,7 @@ export const pageContent = {
     title: "Cookie Policy",
     seoTitle: `${gameName} Cookie Policy`,
     description: `Learn about cookies and similar technologies that may be used when visiting ${gameName}.`,
-    keywords: ["Arrows Go cookies", "cookie policy", "browser game privacy"],
+    keywords: ["Arrows Go cookies", "cookie policy", "browser puzzle privacy"],
     updated,
     intro: "This Cookie Policy explains what cookies are, how they may be used, and how you can manage them.",
     sections: [
@@ -200,17 +201,17 @@ export const pageContent = {
     title: "Disclaimer",
     seoTitle: `${gameName} Disclaimer`,
     description: `Read the ${gameName} disclaimer about website information, embedded game availability, external links, and entertainment use.`,
-    keywords: ["Arrows Go disclaimer", "website disclaimer", "browser game terms"],
+    keywords: ["Arrows Go disclaimer", "website disclaimer", "browser puzzle terms"],
     updated,
     intro: `${gameName} is provided for general entertainment and informational purposes.`,
     sections: [
       {
         heading: "Game Availability",
-        body: "Arrows Go is offered as a browser entertainment experience. We cannot guarantee uninterrupted availability, compatibility with every device, or error-free embedded content.",
+        body: `${playableTitle} is offered as a browser entertainment experience. We cannot guarantee uninterrupted availability, compatibility with every device, or error-free embedded content.`,
       },
       {
         heading: "No Professional Advice",
-        body: "Articles about focus, reflexes, screen time, or gaming habits are informational only and should not be treated as medical, educational, or psychological advice.",
+        body: "Articles about focus, puzzle habits, screen time, or gaming routines are informational only and should not be treated as medical, educational, or psychological advice.",
       },
       {
         heading: "External Links",
@@ -218,7 +219,7 @@ export const pageContent = {
       },
       {
         heading: "Advertising",
-        body: "Ads may appear to support free access. Advertisement placement does not represent endorsement by Arrows Go.",
+        body: `${gameName} may show ads to support free access. Advertisement placement does not represent endorsement by ${gameName}.`,
       },
       {
         heading: "Questions",
@@ -228,35 +229,35 @@ export const pageContent = {
   },
   faq: {
     title: "Frequently Asked Questions",
-    seoTitle: `${gameName} FAQ - Gameplay, Controls, and Support`,
-    description: `Find answers about ${gameName}, including gameplay, controls, mobile support, safety, and browser loading.`,
-    keywords: ["Arrows Go FAQ", "Arrows Go questions", "arrow game help"],
+    seoTitle: `${gameName} FAQ - ${playableTitle} Gameplay, Controls, and Support`,
+    description: `Find answers about ${gameName} and ${playableTitle}, including gameplay, controls, mobile support, safety, and browser loading.`,
+    keywords: ["Arrows Go FAQ", "Remove All Arrows questions", "arrow puzzle help"],
     schemaType: "FAQPage",
-    intro: "Quick answers before you start a run.",
+    intro: "Quick answers before you start clearing arrows.",
     sections: [
       {
         heading: "What is Arrows Go?",
-        body: "Arrows Go is a free browser arcade game where you guide a moving arrow by changing direction and avoiding hazards.",
+        body: `${gameName} is a free browser puzzle site where you can play ${playableTitle} online.`,
+      },
+      {
+        heading: "What is Remove All Arrows?",
+        body: `${playableTitle} is an arrow logic puzzle where each clicked arrow flies in its pointed direction. The goal is to remove every arrow without causing a collision.`,
       },
       {
         heading: "Is Arrows Go free?",
-        body: "Yes. You can play Arrows Go online with no download, no account, and no app install.",
+        body: `Yes. You can play ${playableTitle} on ${gameName} with no download, no account, and no app install.`,
       },
       {
-        heading: "How do you play Arrows Go?",
-        body: "Open the play page, watch the arrow path, and change direction at the right moment so the arrow avoids hazards and keeps moving.",
+        heading: "How do you play Remove All Arrows?",
+        body: "Look for an arrow with a clear straight path, launch it, then use the newly opened space to solve the next move. If an arrow hits another arrow, the level resets.",
       },
       {
         heading: "Does Arrows Go work on mobile?",
-        body: "Yes. The game is designed for browser play and supports touch or mouse input where the embedded player allows it.",
+        body: "Yes. The embedded game supports browser play on desktop and mobile devices where the Playgama iframe is available.",
       },
       {
         heading: "Why is the game inside an iframe?",
         body: "The playable game is served from an embedded HTML5 game source. The Astro site loads it through /game/index.html so the main site keeps stable routes, SEO, and support pages.",
-      },
-      {
-        heading: "Is Arrows Go safe for children?",
-        body: "The game is a simple arcade timing experience without chat or user accounts. Parents should still supervise browsing and review any ads or external iframe content.",
       },
       {
         heading: "What should I do if the game does not load?",
@@ -266,40 +267,40 @@ export const pageContent = {
   },
   "how-to-play": {
     title: "How To Play",
-    seoTitle: `How to Play ${gameName} - Beginner Guide`,
-    description: `Learn how to play ${gameName}, including the goal, controls, timing tips, and simple ways to improve each run.`,
-    keywords: ["how to play Arrows Go", "Arrows Go guide", "arrow game tutorial"],
+    seoTitle: `How to Play ${playableTitle} on ${gameName}`,
+    description: `Learn how to play ${playableTitle}, including the goal, controls, launch order, collision rules, and simple ways to clear more boards.`,
+    keywords: ["how to play Remove All Arrows", "Arrows Go guide", "arrow puzzle tutorial"],
     schemaType: "HowTo",
-    intro: "Learn the basic loop: read the path, time the turn, avoid hazards, and restart smarter.",
+    intro: "Learn the basic loop: read the board, find a clear path, launch one arrow, and repeat until the board is empty.",
     sections: [
       {
         heading: "Open the Game",
-        body: "Go to the Play page and wait for the iframe to load. Arrows Go runs in the browser, so there is no installer or account setup.",
+        body: `Go to the Play page and wait for the iframe to load. ${playableTitle} runs in the browser, so there is no installer or account setup.`,
       },
       {
-        heading: "Read the Arrow Path",
-        body: "Watch where the arrow is moving and look ahead for hazards, walls, or tight spaces. The best move is usually prepared before the arrow reaches danger.",
+        heading: "Read the Board",
+        body: "Before clicking, trace where each arrow will travel. Every arrow flies straight in the direction it points.",
       },
       {
-        heading: "Change Direction",
-        body: "Use the available mouse, keyboard, or touch control in the embedded player to change direction. The exact input can vary by device, but the goal is the same: turn cleanly before impact.",
+        heading: "Launch a Clear Arrow",
+        body: "Click or tap an arrow that has an open path to leave the board. Avoid launching an arrow if its path crosses another arrow.",
       },
       {
-        heading: "Avoid Hazards",
-        body: "Do not chase every open space. Look for the safest lane and avoid sharp last-second corrections unless there is no other option.",
+        heading: "Avoid Collisions",
+        body: "A collision resets the puzzle. When two arrows block each other, remove a different arrow first or solve from the edge inward.",
       },
       {
         heading: "Use Restarts",
-        body: "Fast restarts are part of the game. After a mistake, remember which turn was late or early, then adjust the next attempt.",
+        body: "Fast restarts are part of the learning loop. After a mistake, identify which launch caused the collision and try a different order.",
       },
       {
         heading: "Quick Tips",
         items: [
-          "Look one move ahead instead of staring at the arrow.",
-          "Turn early when a lane is closing.",
-          "Avoid panic taps; one clean input is better than several rushed ones.",
-          "Use fullscreen on larger screens for better visibility.",
-          "Take short breaks if timing starts to feel inconsistent.",
+          "Start with arrows near the border when they have open exits.",
+          "Trace the full straight path before every launch.",
+          "Do not click several arrows quickly unless you already know the sequence.",
+          "Use fullscreen on larger screens for better board visibility.",
+          "Pause if you keep repeating the same collision.",
         ],
       },
     ],
@@ -307,20 +308,20 @@ export const pageContent = {
   parents: {
     title: "Parents & Safety Guide",
     seoTitle: `Parents Guide to ${gameName}`,
-    description: `${gameName} is a simple browser arcade game. Read safety, privacy, and screen-time notes for parents and guardians.`,
-    keywords: ["Arrows Go for kids", "safe browser game", "parents guide arcade game"],
-    intro: "A practical overview for families using Arrows Go as a quick browser game.",
+    description: `${gameName} is a simple browser puzzle site. Read safety, privacy, and screen-time notes for parents and guardians.`,
+    keywords: ["Arrows Go for kids", "safe browser puzzle", "parents guide puzzle game"],
+    intro: `A practical overview for families using ${gameName} and ${playableTitle} as a quick browser puzzle.`,
     sections: [
       {
         heading: "Game Overview",
-        body: "Arrows Go is a timing-based arcade game with simple movement and quick restarts. It does not require players to create an account.",
+        body: `${playableTitle} is a visual arrow puzzle with short levels and no account requirement on the main ${gameName} website.`,
       },
       {
         heading: "Safety Notes",
         items: [
           "No chat or player messaging is part of the website.",
           "No account is required to access the game page.",
-          "The game is visual and timing-based, so younger players may need help understanding hazards.",
+          "The game is visual and puzzle-based, so younger players may need help understanding collision rules.",
           "External iframe content and ads may be governed by separate providers.",
         ],
       },
@@ -328,7 +329,7 @@ export const pageContent = {
         heading: "Healthy Play Habits",
         items: [
           "Use short sessions and pause if the game becomes frustrating.",
-          "Encourage children to describe what they learned from a failed run.",
+          "Encourage children to describe why an arrow collided before trying again.",
           "Use fullscreen only when it helps visibility and does not hide browser controls needed by the parent.",
           "Keep normal device parental controls enabled where appropriate.",
         ],
@@ -345,98 +346,98 @@ export const pageContent = {
   },
   strategy: {
     title: "Strategy Guide",
-    seoTitle: `Arrows Go Strategy Guide - Timing and Direction Tips`,
-    description: "Learn practical Arrows Go strategies for better timing, cleaner turns, hazard reading, and longer browser arcade runs.",
-    keywords: ["Arrows Go strategy", "arrow game tips", "timing game strategy"],
+    seoTitle: `${playableTitle} Strategy Guide - Launch Order and Board Clearing Tips`,
+    description: `Learn practical ${playableTitle} strategies for choosing launch order, clearing edge arrows, avoiding collisions, and solving harder boards.`,
+    keywords: ["Remove All Arrows strategy", "arrow puzzle tips", "launch order strategy"],
     schemaType: "Article",
-    intro: "A practical guide for players who want cleaner inputs and longer runs.",
+    intro: "A practical guide for players who want cleaner sequences and fewer collision resets.",
     sections: [
       {
-        heading: "Look Ahead",
-        body: "Do not focus only on the arrow tip. Scan the next lane, corner, or hazard so the next direction change is already planned.",
+        heading: "Start With Clear Exits",
+        body: "Look for arrows that already have a straight path off the board. Removing those first reduces clutter and can open blocked paths for the next moves.",
       },
       {
-        heading: "Turn With Space",
-        body: "Late turns create panic. When a safe lane is visible, take it before the path becomes cramped.",
+        heading: "Work From the Edges",
+        body: "Border arrows often need less space to escape. If an edge arrow is safe, launch it before the center becomes crowded with possible paths.",
       },
       {
-        heading: "Use Failed Runs",
-        body: "A failed run is useful if you identify the decision that ended it. Ask whether the input was too early, too late, or pointed toward a bad lane.",
+        heading: "Visualize Before Clicking",
+        body: "Do not focus only on the arrow tip. Trace the full straight line from the arrow to the board edge and check whether anything sits in that route.",
       },
       {
-        heading: "Control Rhythm",
+        heading: "Control the Sequence",
         items: [
-          "Avoid tapping repeatedly unless the game clearly requires it.",
-          "Let the arrow travel enough distance to confirm the next opening.",
-          "Use consistent input pressure on touch screens.",
-          "Switch to fullscreen if small hazards are hard to read.",
+          "Avoid quick clicking unless the order is obvious.",
+          "Remove blockers before launching arrows trapped behind them.",
+          "When stuck, solve backward by asking which arrow must leave last.",
+          "Use fullscreen if small arrows or dense boards are hard to read.",
         ],
       },
       {
         heading: "Practice Short Sets",
-        body: "Play in short sets of five to ten attempts. That gives you enough repetition to improve without turning timing mistakes into frustration.",
+        body: "Play in short sets of five to ten puzzles. That gives you enough repetition to improve without turning one repeated collision into frustration.",
       },
     ],
   },
   "difficulty-guide": {
     title: "Challenge Guide",
-    seoTitle: `Arrows Go Challenge Guide - Timing, Speed, and Focus`,
-    description: "Understand what makes Arrows Go harder, from faster decisions to tighter spaces and longer focus streaks.",
-    keywords: ["Arrows Go difficulty", "arrow game challenge", "reflex game guide"],
+    seoTitle: `${playableTitle} Challenge Guide - Hard Boards and Puzzle Difficulty`,
+    description: `Understand what makes ${playableTitle} harder, from crowded grids to hidden blockers and one-collision resets.`,
+    keywords: ["Remove All Arrows difficulty", "arrow puzzle challenge", "brain game guide"],
     schemaType: "Article",
-    intro: "Arrows Go becomes harder when decisions are tighter, hazards are closer, and focus has to last longer.",
+    intro: `${playableTitle} becomes harder when arrows are packed tightly, exits are blocked, and only one launch order keeps the board safe.`,
     sections: [
       {
-        heading: "What Makes a Run Easy",
+        heading: "What Makes a Board Easy",
         items: [
-          "Wide spaces with clear exits.",
-          "Slow, readable direction changes.",
-          "Few hazards competing for attention.",
-          "Short sessions where fatigue has not built up.",
+          "Several arrows already point toward open exits.",
+          "Few arrows block each other's straight paths.",
+          "The board has visible edge clears.",
+          "Mistakes are easy to diagnose after a restart.",
         ],
       },
       {
-        heading: "What Makes a Run Hard",
+        heading: "What Makes a Board Hard",
         items: [
-          "Narrow lanes that punish late input.",
-          "Hazards placed near direction changes.",
-          "Longer streaks that demand sustained focus.",
-          "Small screens where spacing is harder to read.",
+          "Center arrows block multiple paths at once.",
+          "Several arrows look safe but collide after moving.",
+          "The correct first move is not on the edge.",
+          "A dense board requires solving several moves ahead.",
         ],
       },
       {
         heading: "How to Improve",
-        body: "Start by making one decision earlier than usual. If that helps, build the habit. If it causes mistakes, wait slightly longer and focus on reading the lane before input.",
+        body: "Start by finding all arrows with open exits. If none are obvious, look for a blocker that must be removed before the rest of the board can open.",
       },
       {
         heading: "When to Take a Break",
-        body: "If every run ends from the same rushed mistake, pause for a minute. Timing games improve faster when you reset attention instead of forcing more attempts.",
+        body: "If every attempt repeats the same collision, pause for a moment. Hard boards often become clearer after you stop clicking and re-read the grid.",
       },
     ],
   },
   "game-mechanics": {
     title: "Game Mechanics",
-    seoTitle: `Arrows Go Mechanics - Direction, Timing, and Hazards`,
-    description: "Learn how Arrows Go works, including movement, direction changes, hazard avoidance, restarts, and browser iframe play.",
-    keywords: ["Arrows Go mechanics", "arrow arcade mechanics", "direction game"],
+    seoTitle: `${playableTitle} Mechanics - Arrows, Launch Paths, and Collisions`,
+    description: `Learn how ${playableTitle} works, including directional arrows, straight launch paths, collision resets, and browser iframe play.`,
+    keywords: ["Remove All Arrows mechanics", "arrow puzzle mechanics", "directional puzzle game"],
     schemaType: "Article",
-    intro: "The mechanics are simple on purpose: a moving arrow, direction decisions, hazards, and fast retry flow.",
+    intro: "The mechanics are simple on purpose: each arrow points one way, each launch follows a straight line, and every collision matters.",
     sections: [
       {
-        heading: "Moving Arrow",
-        body: "The central object is the arrow. Its movement creates the pressure and gives every decision a clear direction.",
+        heading: "Directional Arrows",
+        body: "Every arrow shows its launch direction before you click. That visible direction is the main clue for solving the board.",
       },
       {
-        heading: "Direction Changes",
-        body: "Players use input to change direction at the right time. Clean direction changes are the main skill expression in Arrows Go.",
+        heading: "Straight Launch Paths",
+        body: "When launched, an arrow travels straight in the direction it points. The player must trace that route before committing.",
       },
       {
-        heading: "Hazard Avoidance",
-        body: "Hazards and blocked space create the challenge. The player must read the route before the arrow reaches danger.",
+        heading: "Collision Resets",
+        body: "If a launched arrow hits another arrow, the puzzle resets. This rule makes order planning the core skill.",
       },
       {
-        heading: "Fast Restarts",
-        body: "Quick restarts keep the game useful for short sessions. A failed attempt should feed the next attempt instead of feeling like a long reset.",
+        heading: "Board Clearing",
+        body: "The goal is to remove every arrow from the board. Each successful launch changes the available paths for the arrows that remain.",
       },
       {
         heading: "Embedded Browser Play",
@@ -448,9 +449,9 @@ export const pageContent = {
     title: "Privacy Policy",
     seoTitle: `${gameName} Privacy Policy`,
     description: `Read the ${gameName} Privacy Policy to understand contact data, technical information, cookies, and third-party iframe content.`,
-    keywords: ["Arrows Go privacy policy", "browser game privacy", "data protection"],
+    keywords: ["Arrows Go privacy policy", "browser puzzle privacy", "data protection"],
     updated,
-    intro: "This Privacy Policy explains how information may be handled when you use the Arrows Go website.",
+    intro: `This Privacy Policy explains how information may be handled when you use the ${gameName} website.`,
     sections: [
       {
         heading: "Information You Provide",
@@ -475,7 +476,7 @@ export const pageContent = {
       },
       {
         heading: "Children's Privacy",
-        body: "Arrows Go does not require registration. We do not knowingly collect personal information from children under 13 through the main website.",
+        body: `${gameName} does not require registration. We do not knowingly collect personal information from children under 13 through the main website.`,
       },
       {
         heading: "Your Choices",
@@ -495,7 +496,7 @@ export const pageContent = {
     title: "Terms of Service",
     seoTitle: `Terms of Service | ${gameName}`,
     description: `Read the ${gameName} Terms of Service for website use, embedded game access, acceptable use, and limitations.`,
-    keywords: ["Arrows Go terms", "terms of service", "browser game terms"],
+    keywords: ["Arrows Go terms", "terms of service", "browser puzzle terms"],
     updated,
     intro: `By accessing ${gameName}, you agree to these Terms of Service.`,
     sections: [
@@ -505,7 +506,7 @@ export const pageContent = {
       },
       {
         heading: "Description of Service",
-        body: "Arrows Go provides a free browser game page, supporting guides, related game pages, blog content, and policy information.",
+        body: `${gameName} provides a free browser game page, supporting guides, related game pages, blog content, and policy information.`,
       },
       {
         heading: "Acceptable Use",
@@ -530,7 +531,7 @@ export const pageContent = {
       },
       {
         heading: "Limitation of Liability",
-        body: "To the fullest extent permitted by law, Arrows Go and its operators are not liable for indirect, incidental, special, consequential, or punitive damages related to site use.",
+        body: `To the fullest extent permitted by law, ${gameName} and its operators are not liable for indirect, incidental, special, consequential, or punitive damages related to site use.`,
       },
       {
         heading: "Terms Questions",

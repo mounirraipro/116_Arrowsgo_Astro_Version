@@ -28,7 +28,7 @@ const improveMetaDescription = (value: string) => {
   const expanded =
     clean.length >= 110
       ? clean
-      : `${clean} Play online free with fast arrow timing, direction changes, hazard avoidance, and no downloads.`;
+      : `${clean} Play online free with arrow puzzle logic, launch-order strategy, collision avoidance, and no downloads.`;
   if (expanded.length <= 145) return expanded;
   return `${expanded.slice(0, 142).replace(/\s+\S*$/, "")}...`;
 };
@@ -125,7 +125,7 @@ const routeHref = (path: string) => withTrailingSlash(path);
             ))}
           </nav>
           <div class="menu-bottom">
-            <p>Turn fast. Dodge clean. Keep the run alive.</p>
+            <p>Launch the right arrow. Clear every board.</p>
             <a href="/play/">Start playing</a>
           </div>
         </div>

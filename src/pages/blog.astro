@@ -12,13 +12,13 @@ const categories = Array.from(
 ).sort(([a], [b]) => a.localeCompare(b));
 ---
 
-<BaseLayout title="Arrows Go Blog" description="Read Arrows Go guides, timing strategy, browser arcade tips, mobile play notes, and parent-friendly safety articles.">
+<BaseLayout title="Arrows Go Blog" description="Read Remove All Arrows guides, launch-order strategy, browser puzzle tips, mobile play notes, and parent-friendly safety articles.">
   <main class="blog-card-page">
     <header class="blog-card-hero" aria-labelledby="blog-directory-title">
       <div class="blog-card-hero-copy">
         <p>{articles.length} articles across {categories.length} topics</p>
         <h1 id="blog-directory-title">Arrows Go Blog</h1>
-        <span>Guides, strategy, and practical notes for better arrow arcade play.</span>
+        <span>Guides, strategy, and practical notes for better arrow puzzle clears.</span>
       </div>
       <nav class="blog-card-topics" aria-label="Blog topics">
         {categories.slice(0, 8).map(([category, count]) => (

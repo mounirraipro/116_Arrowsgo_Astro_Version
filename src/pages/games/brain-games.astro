@@ -1,0 +1,60 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { externalGames } from "@/data/externalGames";
+
+const brainAlternatives = externalGames.slice(0, 5);
+---
+
+<BaseLayout
+  title="Brain Games Online"
+  description="Play Remove All Arrows and related brain-friendly browser games with clear rules, short levels, and quick no-download play."
+  seo={{ path: "/games/brain-games", seoTitle: "Brain Games Online - Free Browser Puzzle Picks" }}
+>
+  <section class="games-directory">
+    <header class="games-directory-hero">
+      <div>
+        <h1>Brain games online.</h1>
+        <p>Start with Remove All Arrows when you want a direct arrow logic puzzle, then try related browser games that reward board reading and cleaner decisions.</p>
+      </div>
+      <a class="games-directory-action" href="/play/"><span></span>Play Remove All Arrows</a>
+    </header>
+
+    <section class="games-guide-strip" aria-labelledby="brain-game-guide">
+      <h3 id="brain-game-guide">How to solve brain games better</h3>
+      <div>
+        <article>
+          <h3>Read before moving</h3>
+          <p>Good puzzle play starts before the first input. In Remove All Arrows, that means tracing the launch path before you click.</p>
+        </article>
+        <article>
+          <h3>Use short sets</h3>
+          <p>Short sets make it easier to notice one repeated mistake and correct it. Stop when the same collision keeps repeating.</p>
+        </article>
+        <article>
+          <h3>Keep choices deliberate</h3>
+          <p>One planned launch is usually better than several quick guesses. The cleaner the sequence, the easier the next board becomes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="games-directory-main" aria-labelledby="brain-games-list">
+      <div class="games-directory-intro">
+        <h2 id="brain-games-list">Related browser games</h2>
+        <p>These games are selected for clear feedback, short sessions, and readable decision loops.</p>
+      </div>
+      <div class="games-directory-list">
+        {brainAlternatives.map((game, index) => (
+          <a class:list={["games-directory-row", game.accentClass]} href={`/games/${game.slug}/`}>
+            <span class="games-directory-number">{String(index + 1).padStart(2, "0")}</span>
+            <img src={game.thumbnail} alt={`${game.title} thumbnail`} width="320" height="180" loading="lazy" />
+            <div>
+              <span>{game.category}</span>
+              <h3>{game.title}</h3>
+              <p>{game.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </section>
+</BaseLayout>

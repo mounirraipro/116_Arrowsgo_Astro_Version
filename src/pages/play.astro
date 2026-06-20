@@ -4,15 +4,15 @@ import { externalGames } from "@/data/externalGames";
 import { siteConfig } from "@/data/siteConfig";
 
 const playSteps = [
-  ["1", "Read", "Watch the next lane before the arrow reaches danger."],
-  ["2", "Turn", "Change direction with one clean input."],
-  ["3", "Survive", "Avoid hazards and learn from each restart."],
+  ["1", "Scan", "Trace the straight path each arrow will take before clicking."],
+  ["2", "Sequence", "Choose the arrow that can leave safely and open the next path."],
+  ["3", "Clear", "Remove every arrow without triggering a collision reset."],
 ];
 
 const tips = [
-  "Look ahead instead of staring at the arrow.",
-  "Turn early when a lane is closing.",
-  "Use fullscreen when small hazards are hard to read.",
+  "Start with edge arrows when their exits are clear.",
+  "Trace the full path before every launch.",
+  "Use fullscreen when dense boards are hard to read.",
 ];
 
 const relatedGames = externalGames.slice(0, 4);
@@ -20,12 +20,12 @@ const relatedGames = externalGames.slice(0, 4);
 
 <BaseLayout
   title={`Play ${siteConfig.name} Online`}
-  description={`Play ${siteConfig.name} online free in your browser. Guide the arrow, time each direction change, avoid hazards, and restart instantly on desktop or mobile.`}
+  description={`Play Remove All Arrows on ${siteConfig.name} online free in your browser. Launch arrows in sequence, avoid collisions, and clear every board on desktop or mobile.`}
 >
   <section class="play-stage" id="top">
     <div class="play-stage-bg" aria-hidden="true"></div>
     <div class="play-shell" data-game-shell>
-      <iframe src="/game/index.html" title="Arrows Go game" allow="autoplay; fullscreen *" allowfullscreen></iframe>
+      <iframe src="/game/index.html" title="Remove All Arrows game" allow="autoplay; fullscreen *" allowfullscreen></iframe>
       <div class="play-float-controls">
         <button type="button" data-share-game aria-label="Share game">
           <span>Share</span>
@@ -40,8 +40,8 @@ const relatedGames = externalGames.slice(0, 4);
   <section class="play-info-section">
     <div class="play-info-head">
       <p class="eyebrow">Play online</p>
-      <h1>Arrows Go in your browser.</h1>
-      <p>Free, instant, and built for quick timing runs.</p>
+      <h1>Remove All Arrows in your browser.</h1>
+      <p>Free, instant, and built for quick logic puzzles.</p>
     </div>
     <div class="play-step-grid">
       {playSteps.map(([number, title, text]) => (
@@ -85,16 +85,16 @@ const relatedGames = externalGames.slice(0, 4);
     </div>
     <div class="seo-copy-grid">
       <article class="seo-copy-card seo-copy-wide">
-        <h3>What makes Arrows Go different</h3>
-        <p>Arrows Go keeps the browser arcade loop direct. The arrow moves, hazards create pressure, and the player changes direction before the safe lane disappears. There is no account setup, no long tutorial, and no download; the playable game loads through a local wrapper at /game/index.html.</p>
+        <h3>What makes Remove All Arrows different</h3>
+        <p>Remove All Arrows keeps the browser puzzle loop direct. Every arrow shows its launch direction, every click changes the board, and every collision restarts the level. There is no account setup, no long tutorial, and no download; the playable game loads through a local wrapper at /game/index.html.</p>
       </article>
       <article class="seo-copy-card">
-        <h3>How to start a strong run</h3>
-        <p>Scan ahead before the arrow reaches a tight space. If the next lane is safe, turn with enough room to recover. Late turns can work, but they leave less margin for the next hazard and often lead to panic inputs.</p>
+        <h3>How to start a strong board</h3>
+        <p>Scan the edges first, then look inward. If an arrow has a clear straight path to the outside, launching it can reduce blockers and reveal the next safe move. Avoid clicking quickly until you know the sequence.</p>
       </article>
       <article class="seo-copy-card">
         <h3>Best sessions</h3>
-        <p>Play Arrows Go in short sets. Five to ten attempts are enough to notice one mistake and correct it. Use fullscreen on larger screens, keep touch inputs small on mobile, and pause when timing starts to feel inconsistent.</p>
+        <p>Play Arrows Go in short sets. Five to ten boards are enough to notice one repeated collision and correct it. Use fullscreen on larger screens, keep taps precise on mobile, and pause when you stop tracing paths before clicking.</p>
       </article>
     </div>
   </section>
@@ -113,7 +113,7 @@ const relatedGames = externalGames.slice(0, 4);
         await (iframe?.requestFullscreen?.() ?? shell?.requestFullscreen?.());
       });
       share?.addEventListener("click", async () => {
-        const data = { title: "Arrows Go", text: "Play Arrows Go online.", url: location.href };
+        const data = { title: "Remove All Arrows", text: "Play Remove All Arrows on Arrows Go.", url: location.href };
         try {
           if (navigator.share) await navigator.share(data);
           else await navigator.clipboard?.writeText(location.href);

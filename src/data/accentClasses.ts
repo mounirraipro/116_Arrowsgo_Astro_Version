@@ -1,10 +1,10 @@
-export const brandAccentClass = "accent-green";
+export const brandAccentClass = "accent-blue";
 
 export const getFocusAccentClass = (name: string) => {
   const key = name.toLowerCase();
-  if (key.includes("direction")) return "accent-green";
-  if (key.includes("timing")) return "accent-gold";
-  if (key.includes("focus")) return "accent-sky";
-  if (key.includes("touch") || key.includes("mobile")) return "accent-violet";
+  if (key.includes("clear")) return "accent-blue";
+  if (key.includes("launch")) return "accent-gold";
+  if (key.includes("collision")) return "accent-sky";
+  if (key.includes("edge")) return "accent-violet";
   return brandAccentClass;
 };
